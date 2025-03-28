@@ -34,7 +34,7 @@ def start_server(PORT):
                 filename = command.split(" ", 1)[1].strip()  # Extract filename
                 receive_file(client_socket, filename)
             client_socket.close()
- if __name__ == "__main__":
+if __name__ == "__main__":
    if len(sys.argv)!=2:
       print("usage:python3 scrpt.py port")
       sys.exit(1)
@@ -42,4 +42,4 @@ def start_server(PORT):
       PORT=int(sys.argv[1])
       start_server(PORT)
    except ValueError  :
-       print("Error: Enter valid value")         
+       print("Error: Enter valid value")
